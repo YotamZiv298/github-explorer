@@ -1,15 +1,15 @@
 import { useContext } from "react";
-import { RepositoryContext } from "../Context/RepositoryContext";
-import { RepositoryProvider } from "../Context/RepositoryProvider";
+import { RepositoryContext } from "../context/RepositoryContext";
+import { RepositoryProvider } from "../context/RepositoryProvider";
 
 export function useRepository() {
-  const context = useContext(RepositoryContext);
+	const context = useContext(RepositoryContext);
 
-  if (context === undefined) {
-    throw new Error(
-      `${useRepository.name} must be used within a ${RepositoryProvider.name}`
-    );
-  }
+	if (context === undefined) {
+		throw new Error(
+			`${useRepository.name} must be used within a ${RepositoryProvider.name}`,
+		);
+	}
 
-  return context;
+	return context;
 }

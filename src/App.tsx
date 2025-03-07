@@ -1,8 +1,8 @@
 import { memo } from "react";
 import "./App.css";
-import { RepositoryProvider } from "./Context/RepositoryProvider";
 import Content from "./components/Content";
 import Header from "./components/Header";
+import { RepositoryProvider } from "./context/RepositoryProvider";
 
 function App() {
   return (
